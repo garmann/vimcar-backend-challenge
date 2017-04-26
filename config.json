@@ -1,0 +1,14 @@
+{
+  "mysql": {
+    "host":   "192.168.178.64",
+    "user":   "root",
+    "pass":   "x",
+    "db":     "vimcar",
+    "charset": "utf8"
+
+  },
+  "security": {
+    "salt": "$2b$12$Z79kGw02HAdl3I2Pxhhnqu",
+    "orig-salt": "fe7ruh45tz"
+  }
+}
