@@ -4,6 +4,12 @@ this is a first shoot for the backend challenge from vimcar. for the last months
 
 currently you have to run your own flask and myqsl process. there is no docker container or else. for my development i always use my vagrant images. this would be to overkill to upload them.
 
+update: run a mysql docker container:
+- docker build -t mysql57-vimcar .
+- docker run -e MYSQL_ROOT_PASSWORD=x -p 3306:3306 mysql57-vimcar
+
+now there is no need to change config.json. mysql will listen on your host on 3306.
+
 ## commands
 - register new user:
 ```http --form POST http://0.0.0.0:5000/register username="1@1.de" password="XXX"```
