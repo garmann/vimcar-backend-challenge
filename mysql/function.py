@@ -92,8 +92,7 @@ def create_user_activationlink(username):
   if not username: return False
 
   user_id_mysql = get_user_mysqlid(username)
-  if not user_id_mysql:
-    return False
+  if not user_id_mysql: return False
 
   link = username.replace('@', '_') + '_' + str(randint(1000, 10000000))
   sql = "INSERT INTO activationlink (userid, link) VALUES('{}', '{}')".format(user_id_mysql, link)
